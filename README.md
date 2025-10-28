@@ -23,9 +23,6 @@ O workflow desenvolvido neste laboratório segue as seguintes etapas:
 3. **SNS Topic** – Envia notificações ao final da execução.
 4. **S3 Bucket (opcional)** – Armazena logs ou dados de saída.
 
-> Exemplo de diagrama do fluxo:
-![Workflow Diagram](./images/step-functions-diagram.png)
-
 ---
 
 ## 🚀 Etapas Realizadas
