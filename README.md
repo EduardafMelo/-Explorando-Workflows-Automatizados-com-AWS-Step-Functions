@@ -8,16 +8,20 @@ Este repositório foi criado como parte do desafio prático para consolidar o ap
 ---
 
 ## 🧠 O que são AWS Step Functions?
-O **Step Functions** é um serviço da AWS que permite orquestrar vários serviços em fluxos de trabalho visuais. Ele ajuda a coordenar funções Lambda, tarefas em fila (SQS), notificações (SNS) e muito mais — tudo sem precisar gerenciar servidores.
+O **AWS Step Functions** é um serviço que permite orquestrar fluxos de trabalho compostos por diferentes serviços da AWS — como **Lambda**, **SQS**, **SNS**, **DynamoDB** e outros — tudo isso de forma **visual e automatizada**, sem precisar gerenciar servidores.
+
+Cada parte do fluxo é chamada de **estado**, e cada estado executa uma ação, podendo depender do resultado anterior. Isso torna o processo muito mais organizado e confiável.
 
 ---
 
-## ⚙️ Estrutura do Workflow
-O workflow criado neste laboratório inclui:
-1. **Lambda Function** — responsável por executar uma tarefa (ex: processar um pedido ou validar dados).
-2. **Step Function** — orquestra o fluxo das funções, controlando o que acontece em caso de sucesso ou erro.
-3. **SNS Topic** — envia notificações ao final da execução.
-4. **S3 Bucket (opcional)** — para armazenar logs ou resultados.
+## ⚙️ Estrutura do Workflow Criado
+
+O workflow desenvolvido neste laboratório segue as seguintes etapas:
+
+1. **Lambda Function** – Responsável por processar ou validar dados.
+2. **Step Function** – Gerencia o fluxo das funções, decidindo o próximo passo com base no resultado.
+3. **SNS Topic** – Envia notificações ao final da execução.
+4. **S3 Bucket (opcional)** – Armazena logs ou dados de saída.
 
 > Exemplo de diagrama do fluxo:
 ![Workflow Diagram](./images/step-functions-diagram.png)
@@ -25,15 +29,17 @@ O workflow criado neste laboratório inclui:
 ---
 
 ## 🚀 Etapas Realizadas
-1. Criação das funções Lambda na AWS.
-2. Configuração do Step Functions no modo visual (Workflow Studio).
-3. Definição dos estados e transições.
-4. Teste e execução do fluxo.
-5. Análise dos resultados no console.
+
+1. Criação de uma função Lambda no console da AWS.
+2. Desenvolvimento do fluxo principal no **AWS Step Functions (Workflow Studio)**.
+3. Configuração dos estados, transições e condições de erro.
+4. Integração com SNS para envio de mensagens após a execução.
+5. Teste prático do fluxo e análise de logs.
 
 ---
 
-## 🧩 Exemplo de Definição do Workflow
+## 🧩 Exemplo de Definição do Workflow (JSON)
+
 ```json
 {
   "Comment": "Exemplo de fluxo de aprovação com Step Functions",
@@ -66,3 +72,4 @@ O workflow criado neste laboratório inclui:
     }
   }
 }
+
