@@ -1,0 +1,28 @@
+
+---
+
+### 🗒 **notes/insights.md**
+
+```markdown
+# 💡 Insights e Aprendizados Pessoais
+
+Durante o desafio prático do **AWS Step Functions**, pude observar:
+
+## 🧩 Entendimentos Técnicos
+- A orquestração de tarefas com Step Functions é muito mais simples que controlar processos manualmente via código.
+- O uso de **Lambda** como tarefas torna o fluxo altamente escalável e desacoplado.
+- O **JSON de definição** é poderoso e fácil de versionar.
+- É possível integrar notificações com **SNS**, armazenar resultados no **S3**, e acionar **SQS** ou **DynamoDB**.
+
+## ⚙️ Desafios Enfrentados
+- Entender o formato correto da definição JSON.
+- Gerenciar permissões IAM entre Step Functions e Lambda.
+- Interpretar erros no console durante as execuções.
+
+## 🚀 Soluções Aplicadas
+- Consultei a documentação oficial da AWS e testei várias configurações no Workflow Studio.
+- Usei logs detalhados no CloudWatch para entender os erros.
+- Fiz ajustes nas políticas IAM para liberar as ações necessárias.
+
+## 🧠 Conclusão
+Esse laboratório me ajudou a compreender, na prática, o poder da automação com Step Functions e como documentar cada etapa de forma organizada.
